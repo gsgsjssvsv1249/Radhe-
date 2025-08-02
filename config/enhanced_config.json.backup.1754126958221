@@ -1,0 +1,120 @@
+{
+    "server": {
+        "port": 3000,
+        "host": "0.0.0.0",
+        "maxConnections": 100,
+        "timeout": 30000
+    },
+    "telegram": {
+        "maxMessageLength": 4096,
+        "commandTimeout": 30000,
+        "autoReports": {
+            "enabled": true,
+            "interval": 21600000,
+            "includeStats": true
+        }
+    },
+    "security": {
+        "maxFailedAttempts": 5,
+        "blockDuration": 1800000,
+        "encryptionEnabled": true,
+        "logLevel": "info",
+        "autoBackup": true
+    },
+    "fileManager": {
+        "maxFileSize": 52428800,
+        "allowedExtensions": [
+            ".txt", ".log", ".json", ".xml", ".csv",
+            ".jpg", ".jpeg", ".png", ".gif", ".bmp",
+            ".mp3", ".mp4", ".avi", ".mov", ".wav",
+            ".pdf", ".doc", ".docx", ".xls", ".xlsx",
+            ".zip", ".rar", ".7z", ".tar", ".gz"
+        ],
+        "uploadDir": "./uploads",
+        "downloadDir": "./downloads",
+        "autoCleanup": {
+            "enabled": true,
+            "maxAge": 604800000,
+            "interval": 86400000
+        }
+    },
+    "scheduler": {
+        "maxTasks": 50,
+        "minInterval": 60000,
+        "maxInterval": 86400000,
+        "persistTasks": true
+    },
+    "networkTools": {
+        "defaultTimeout": 5000,
+        "maxHops": 30,
+        "defaultPorts": [21, 22, 23, 25, 53, 80, 110, 443, 993, 995, 3389],
+        "dnsServers": ["8.8.8.8", "1.1.1.1"]
+    },
+    "monitoring": {
+        "enabled": true,
+        "interval": 300000,
+        "metrics": {
+            "cpu": true,
+            "memory": true,
+            "disk": true,
+            "network": true,
+            "processes": true
+        },
+        "alerts": {
+            "highCpuThreshold": 80,
+            "highMemoryThreshold": 85,
+            "lowDiskSpaceThreshold": 90
+        }
+    },
+    "logging": {
+        "level": "info",
+        "maxLogSize": 10485760,
+        "maxLogFiles": 5,
+        "logToFile": true,
+        "logToConsole": true
+    },
+    "features": {
+        "systemInfo": true,
+        "fileManager": true,
+        "networkTools": true,
+        "scheduler": true,
+        "security": true,
+        "monitoring": true,
+        "autoActions": true,
+        "commandHistory": true
+    },
+    "autoActions": {
+        "enabled": true,
+        "triggers": {
+            "lowBattery": {
+                "enabled": false,
+                "threshold": 15,
+                "action": "send_notification"
+            },
+            "highTemperature": {
+                "enabled": false,
+                "threshold": 45,
+                "action": "send_alert"
+            },
+            "suspiciousActivity": {
+                "enabled": true,
+                "action": "log_and_alert"
+            },
+            "deviceDisconnect": {
+                "enabled": true,
+                "action": "send_notification"
+            }
+        }
+    },
+    "ui": {
+        "theme": "dark",
+        "language": "en",
+        "showAdvancedOptions": true,
+        "compactMode": false,
+        "notifications": {
+            "sound": true,
+            "desktop": true,
+            "telegram": true
+        }
+    }
+}

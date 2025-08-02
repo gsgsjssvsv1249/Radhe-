@@ -1,0 +1,46 @@
+[
+  {
+    "id": "task_1754126957121_bnw0m1nrt",
+    "name": "Проверка батареи",
+    "command": "get_battery_status",
+    "schedule": 30,
+    "deviceId": "all",
+    "enabled": true,
+    "createdAt": "2025-08-02T09:29:17.121Z",
+    "lastRun": null,
+    "runCount": 0
+  },
+  {
+    "id": "task_1754126957122_96as09kqv",
+    "name": "Системная информация",
+    "command": "get_system_info",
+    "schedule": 60,
+    "deviceId": "device_001",
+    "enabled": true,
+    "createdAt": "2025-08-02T09:29:17.122Z",
+    "lastRun": null,
+    "runCount": 0
+  },
+  {
+    "id": "task_1754126957122_i6bn5ooby",
+    "name": "Сканирование WiFi",
+    "command": "wifi_scan",
+    "schedule": 120,
+    "deviceId": "all",
+    "enabled": true,
+    "createdAt": "2025-08-02T09:29:17.122Z",
+    "lastRun": null,
+    "runCount": 0
+  },
+  {
+    "id": "task_1754126958221_iwcic6c4v",
+    "name": "Мониторинг Google DNS",
+    "command": "ping:8.8.8.8",
+    "schedule": 15,
+    "deviceId": "all",
+    "enabled": true,
+    "createdAt": "2025-08-02T09:29:18.221Z",
+    "lastRun": null,
+    "runCount": 0
+  }
+]
